@@ -76,12 +76,17 @@ describe("Suíte de testes do toBeTruthy", function(){
 });
 
 describe("Suíte de testes do toBeFalsy", function(){
-    var objeto = {'valor': 123};
-    var texto;
     var numero = 10;
+    
     it("deve validar o uso do matcher 'toBeFalsy'", function(){
-        expect(objeto).toBeTruthy();
-        expect(numero).toBeTruthy();
-        expect(texto).not.toBeTruthy();
+        expect(false).toBeFalsy();
+        expect("").toBeFalsy();
+        expect(0).toBeFalsy();
+        expect(0).toBeFalsy();
+        expect(undefined).toBeFalsy();
+        expect(null).toBeFalsy();
+        expect(NaN).toBeFalsy();
+        expect(Numero).not.toBeFalsy();
+        expect("false").not.toBeFalsy();
     });
 });
