@@ -49,3 +49,39 @@ describe("Suíte de testes do toBeUndefined", function(){
         expect(obj.mensagem).not.toBeUndefined();
     });
 });
+
+
+describe("Suíte de testes do toBeNull", function(){
+    var objeto = null;
+    var texto;
+    var numero = 10;
+    it("deve validar o uso do matcher 'toBeNull'", function(){
+        expect(objeto).toBeNull();
+        expect(numero).not.toBeNull();
+        expect(texto).not.toBeNull();
+        expect(objeto).not.toEqual(texto);
+    });
+});
+
+// aceita qualquer valor valido  = "false"/ "0" / "undefined" / "null" /"NaN"
+describe("Suíte de testes do toBeTruthy", function(){
+    var objeto = {'valor': 123};
+    var texto;
+    var numero = 10;
+    it("deve validar o uso do matcher 'toBeTruthy'", function(){
+        expect(objeto).toBeTruthy();
+        expect(numero).toBeTruthy();
+        expect(texto).not.toBeTruthy();
+    });
+});
+
+describe("Suíte de testes do toBeFalsy", function(){
+    var objeto = {'valor': 123};
+    var texto;
+    var numero = 10;
+    it("deve validar o uso do matcher 'toBeFalsy'", function(){
+        expect(objeto).toBeTruthy();
+        expect(numero).toBeTruthy();
+        expect(texto).not.toBeTruthy();
+    });
+});
