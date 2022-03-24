@@ -26,3 +26,26 @@ describe("Suíte de testes do toMatch", function(){
         
     });
 });
+
+describe("Suíte de testes do toBeDefined", function(){
+    var numero = 10;
+    var texto;
+    var obj = { 'valor': 10 };
+    it("deve validar o uso do matcher 'toBeDefined'", function(){
+        expect(numero).toBeDefined();
+        expect(texto).not.toBeDefined();
+        expect(obj.mensagem).not.toBeDefined();
+    });
+});
+
+
+describe("Suíte de testes do toBeUndefined", function(){
+    var numero = 10;
+    var texto;
+    var obj = { 'valor': 10 };
+    it("deve validar o uso do matcher 'toBeUnDefined'", function(){
+        expect(numero).toBeUndefined();
+        expect(texto).not.toBeUndefined();
+        expect(obj.mensagem).not.toBeUndefined();
+    });
+});
