@@ -13,3 +13,16 @@ describe("Suíte de testes do toBe", function(){
         expect(obj1).not.toBe(obj2);
     });
 });
+
+describe("Suíte de testes do toMatch", function(){
+    var textoComparar = "Curso de testes com Jasmine";
+    it("deve validar o uso do matcher 'toMatch'", function(){
+        expect(textoComparar).toMatch(/Jasmine/);
+        expect(textoComparar).toMatch("Jasmine");
+        expect(textoComparar).toMatch(/Jasmine/i);
+        expect(textoComparar).not.toMatch(/Javascript/);
+        expect("14/12/2016").toMatch(/^\{2}\/\d{2}\/\d{4}$/);       
+
+        
+    });
+});
